@@ -218,9 +218,11 @@ func (r *ListResponse) WriteResponse(w http.ResponseWriter) {
 }
 
 type FlexVolumeResponse struct {
-	Status  string `json:"status"`
-	Message string `json:"message"`
-	Device  string `json:"device"`
+	Status     string `json:"status"`
+	Message    string `json:"message"`
+	Device     string `json:"device"`
+	VolumeName string `json:"volumeName"`
+	Attached   bool   `json:"attached"`
 }
 
 type FlexVolumeMountRequest struct {
